@@ -11,7 +11,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async login(user: Prisma.UserUncheckedCreateInput) {
+  async login(user: any) {
     return {
       access_token: this.jwtService.sign({
         email: user.email,
